@@ -1,9 +1,10 @@
 .my-page {
     margin: auto;
     text-align: center;
+    max-width: 600px;
 }
 
-.demo-card-wide.mdl-card {
+.demo-card-wide.mdl-card .scrum-card-wide.mdl-card {
     width: 300px;
     margin: auto;
 }
@@ -11,6 +12,12 @@
     color: blue;
     height: 176px;
     background: url('http://assets22.pokemon.com/assets/cms2/img/pokedex/full/001.png') center / cover;
+}
+
+.scrum-card-wide > .mdl-card__title {
+    color: blue;
+    height: 176px;
+    background: url('./images/PocketScrum.png') center / cover;
 }
 /*.demo-card-wide > .mdl-card__menu {*/
     /*color: #fff;*/
