@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="myApp">
+<html>
 
 <head>
     <title>Tuija Karling</title>
@@ -11,24 +11,10 @@
 
 <body>
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-    <header class="mdl-layout__header" ng-controller="MainController as main">
+    <header class="mdl-layout__header">
         <div class="mdl-layout__header-row tk-header-row">
-            <!--<button id="demo-menu-lower-left" class="mdl-button mdl-js-button mdl-button&#45;&#45;icon"-->
-            <!--ng-click="main.updateThumbnail()">-->
-            <!--<i class="material-icons">menu</i>-->
-            <!--</button>-->
-            <!--<ul class="mdl-menu mdl-menu&#45;&#45;bottom-left mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-left">-->
-            <!--<a class="mdl-menu__item" href="/#/scrumBoard">Scrum Board</a>-->
-            <!--<a class="mdl-menu__item" href="/#/pictures">Pictures</a>-->
-            <!--<a class="mdl-menu__item" href="/api/pocketScrum/logout">Logout</a>-->
-            <!--</ul>-->
             <span class="mdl-layout-title tk-app-title">Tuija Karling</span>
-
             <div class="mdl-layout-spacer"></div>
-            <!--<nav class="mdl-navigation mdl-layout&#45;&#45;large-screen-only">-->
-            <!--<a class="mdl-menu__item" href="/#/scrumBoard">Scrum Board</a>-->
-            <!--<a class="mdl-menu__item" href="/#/pictures">Pictures</a>-->
-            <!--</nav>-->
         </div>
     </header>
     <main class="mdl-layout__content">
@@ -46,7 +32,7 @@
                 </div>
                 <div class="mdl-card__actions mdl-card--border">
                     <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
-                       href="http://localhost:8080/#/">
+                       href="http://45.55.16.198:8080/#/">
                         Memory Game
                     </a>
                 </div>
@@ -58,7 +44,7 @@
                 </div>
                 <div class="mdl-card__actions mdl-card--border">
                     <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
-                       href="http://localhost:3039/#/">
+                       href="http://45.55.16.198:3039/#/">
                         Pocket Scrum
                     </a>
                 </div>
@@ -66,12 +52,8 @@
 
             </div>
         </div>
-        <ng-view></ng-view>
     </main>
 </div>
-<!-- Angular -->
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-route.js"></script>
 <script src="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.min.js"></script>
 
 <!-- this app -->
