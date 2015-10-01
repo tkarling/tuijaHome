@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
 
 <head>
     <title>Tuija Karling</title>
@@ -13,48 +13,168 @@
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <header class="mdl-layout__header">
         <div class="mdl-layout__header-row tk-header-row">
-            <span class="mdl-layout-title tk-app-title">Tuija Karling</span>
+            <div class="mdl-layout-title">Tuija Karling</div>
+            <div class="mdl-layout-title mdl-cell--hide-phone">, Front End Developer</div>
             <div class="mdl-layout-spacer"></div>
+            <div class="mdl-layout-title"><a href="https://www.linkedin.com/in/tuijakarling">LinkedIn</a></div>
+            <div class="mdl-layout-title mdl-cell--hide-phone"><a href="https://github.com/tkarling">GitHub</a></div>
         </div>
     </header>
-    <main class="mdl-layout__content">
+    <main class="mdl-layout__content" ng-controller="flipCtrl">
+        <ng-view></ng-view>
+
 
         <div class="my-page">
             <div>
-            <h3>Welcome to my Demo Page</h3>
+                <h3>Welcome to my Demo Page</h3>
 
-            <p>Please try following apps:</p>
+                <div class="mdl-grid">
 
-            <div class="mdl-grid">
-            <div class="demo-card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--6-col">
-                <div class="mdl-card__title">
-                    <!--<h3 class="mdl-card__title-text">Welcome</h3>-->
-                </div>
-                <div class="mdl-card__actions mdl-card--border">
-                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
-                       href="http://45.55.16.198:8080/#/">
-                        Memory Game
-                    </a>
+                    <div class="hvr-trim mdl-card mdl-shadow--2dp mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+                        <div class="flip">
+                            <div class="card" ng-class="{'flipped':aIsFlipped}" ng-click="aIsFlipped=!aIsFlipped">
+                                <div class="art-card-wide face front">
+                                    <div class="mdl-card__title">
+                                        <!--<h3 class="mdl-card__title-text">Art-N-Style</h3>-->
+                                    </div>
+                                </div>
+                                <div class="face back">
+                                    <h4>Art-N-Style</h4>
+
+                                    <p>Commercial website of which authenticated owner can easily update the content via UI.</p>
+
+                                    <p>TOOLS: AngularJs/ es2015, Angular Material/ Bootstrap/ animations/ responsive UX,
+                                        node/ express/ mongoDB/ mongoose, stripe, passport, Webpack</p>
+
+                                    <p>Group project by a team of 5</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border">
+                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
+                               href="https://artnstylesalon.com">
+                                Try it
+                            </a>
+                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
+                               href="https://github.com/ArtNstyle/artNstyle">
+                                GitHub
+                            </a>
+
+                        </div>
+                    </div>
+
+
+                    <div class="hvr-trim mdl-card mdl-shadow--2dp mdl-cell mdl-cell--6-col  mdl-cell--4-col-tablet">
+                        <div class="flip">
+                            <div class="card" ng-class="{'flipped':pIsFlipped}" ng-click="pIsFlipped=!pIsFlipped">
+                                <div class="scrum-card-wide face front">
+                                    <div class="mdl-card__title">
+                                        <h3 class="mdl-card__title-text">Pocket Scrum</h3>
+                                    </div>
+                                </div>
+                                <div class="face back">
+                                    <h4>Pocket Scrum</h4>
+                                    <p>Manage scrum board for a small development team and store design/ wireframe
+                                        pictures related to the project. This scrum board was used for the ArtNStyle
+                                        group project.</p>
+
+                                    <p>TOOLS: AngularJs/ es2015, Material Design Lite, responsive UX, node/ express/
+                                        mongoDB/ mongoose, flux architecture inspired by Blog by Viktor Savkin</p>
+
+                                    <p>Personal project</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border">
+                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
+                               href="http://45.55.16.198:3039/#/">
+                                Try it
+                            </a>
+                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
+                               href="https://github.com/tkarling/pocketScrum">
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <div class="hvr-trim mdl-card mdl-shadow--2dp mdl-cell mdl-cell--6-col  mdl-cell--4-col-tablet">
+                        <div class="flip">
+                            <div class="card" ng-class="{'flipped':rIsFlipped}" ng-click="rIsFlipped=!rIsFlipped">
+                                <div class="recipe-shopper-wide face front">
+                                    <div class="mdl-card__title">
+                                        <h3 class="mdl-card__title-text">Recipe Shopper</h3>
+                                    </div>
+                                </div>
+                                <div class="face back">
+                                    <h4>Recipe Shopper</h4>
+
+                                    <p>Create your daily shopping list from your favorite recipes & other earlier favorites</p>
+
+                                    <p>TOOLS: AngularJs/ es5, Angular Material, responsive UX, Firebase/ Firebase authentication, Karma, Jasmine, Protractor, Grunt, Yeoman</p>
+
+                                    <p>Personal project</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border">
+                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
+                               href="https://recipeshopper.firebaseapp.com">
+                                Try it
+                            </a>
+                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
+                               href="https://github.com/tkarling/recipeshopper">
+                                GitHub
+                            </a>
+
+                        </div>
+                    </div>
+
+
+                    <div class="hvr-trim mdl-card mdl-shadow--2dp mdl-cell mdl-cell--6-col  mdl-cell--4-col-tablet">
+                        <div class="flip">
+                            <div class="card" ng-class="{'flipped':mIsFlipped}" ng-click="mIsFlipped=!mIsFlipped">
+                                <div class="demo-card-wide face front">
+                                    <div class="mdl-card__title">
+                                        <h3 class="mdl-card__title-text">Memory Game</h3>
+                                    </div>
+                                </div>
+                                <div class="face back">
+                                    <h4>Memory Game</h4>
+
+                                    <p>Play a game of memory with your favorite selected Pokemon. Can you make it to the
+                                        leaderboards?</p>
+
+                                    <p>TOOLS: AngularJs/ es5, Material Design Lite, responsive UX, Firebase,
+                                        http://pokeapi.co/</p>
+
+                                    <p>Personal project</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mdl-card__actions mdl-card--border">
+                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
+                               href="http://45.55.16.198:8080/#/">
+                                Try it
+                            </a>
+                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
+                               href="https://github.com/tkarling/memory">
+                                GitHub
+                            </a>
+
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
-
-            <div class="scrum-card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--6-col">
-                <div class="mdl-card__title">
-                    <!--<h3 class="mdl-card__title-text">Welcome</h3>-->
-                </div>
-                <div class="mdl-card__actions mdl-card--border">
-                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
-                       href="http://45.55.16.198:3039/#/">
-                        Pocket Scrum
-                    </a>
-                </div>
-            </div>
-
-            </div>
-        </div>
     </main>
 </div>
+<!-- Angular -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
 <script src="https://storage.googleapis.com/code.getmdl.io/1.0.2/material.min.js"></script>
+<script src="./app.js"></script>
 
 <!-- this app -->
 <!--<script src="./app/app-compiled.js"></script>-->

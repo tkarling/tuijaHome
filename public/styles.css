@@ -1,24 +1,150 @@
+/*theme color */
+/*background color #f2efe5*/
+body {
+    background: #f2efe5;
+    font-family: "Raleway", Helvetica, Arial, sans-serif;
+}
+.tk-header-row {
+    padding-left: 20px;
+}
+
+.flip {
+    -webkit-perspective: 800;
+    width: 400px;
+    height: 300px;
+    max-width: calc(100%- 20px);
+    position: relative;
+    margin: 10px auto;
+}
+.flip .card.flipped {
+    -webkit-transform: rotatex(-180deg);
+}
+.flip .card {
+    width: 100%;
+    height: 100%;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transition: 0.5s;
+}
+.flip .card .face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    -webkit-backface-visibility: hidden ;
+    z-index: 2;
+    /*font-family: Georgia;*/
+    /*font-size: 3em;*/
+    /*text-align: center;*/
+    line-height: 200px;
+}
+.flip .card .front {
+    position: absolute;
+    z-index: 1;
+    /*background: black;*/
+    background: url('http://assets22.pokemon.com/assets/cms2/img/pokedex/full/001.png') center / cover;
+    color: white;
+    cursor: pointer;
+}
+.flip .card .back {
+    -webkit-transform: rotatex(-180deg);
+    background: white;
+    color: #3f51b5;
+    cursor: pointer;
+}
+
+p {
+    margin-top: 16px;
+}
+h3 {
+    color:#3f51b5;
+}
+
+header a {
+    color:white;
+    margin-left: 8px;
+    text-decoration: initial;
+}
+
+.mdl-card__title h3 {
+    background-color: white;
+}
+
 .my-page {
     margin: auto;
     text-align: center;
-    max-width: 600px;
+    max-width: 900px;
 }
 
 .demo-card-wide.mdl-card .scrum-card-wide.mdl-card {
     width: 300px;
     margin: auto;
 }
+
+.mdl-card__title {
+    opacity: 1;
+    color: #3f51b5;
+    height: 300px;
+}
+
+.mdl-card__title:hover {
+    content: "Hello World"
+}
+
+.tk-card_content_text {
+    background: red;
+    opacity: 0;
+}
+
+.tk-card_content_text:hover {
+    opacity: 1;
+}
+
+
 .demo-card-wide > .mdl-card__title {
-    color: blue;
-    height: 176px;
     background: url('http://assets22.pokemon.com/assets/cms2/img/pokedex/full/001.png') center / cover;
 }
 
 .scrum-card-wide > .mdl-card__title {
-    color: blue;
-    height: 176px;
     background: url('./images/PocketScrum.png') center / cover;
 }
+
+.recipe-shopper-wide > .mdl-card__title {
+    background: url('./images/RecipeShopper.png') center / cover;
+}
+
+.art-card-wide > .mdl-card__title {
+    background: url('./images/artNstyle.png') center / cover;
+}
+
+
+.hvr-trim {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+}
+.hvr-trim:before {
+    content: '';
+    position: absolute;
+    border: #3f51b5 solid 6px;
+    top: 4px;
+    left: 4px;
+    right: 4px;
+    bottom: 4px;
+    opacity: 0;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: opacity;
+    transition-property: opacity;
+}
+.hvr-trim:hover:before, .hvr-trim:focus:before, .hvr-trim:active:before {
+    opacity: 1;
+}
+
 /*.demo-card-wide > .mdl-card__menu {*/
     /*color: #fff;*/
 /*}*/
