@@ -40,7 +40,7 @@ body {
     position: absolute;
     z-index: 1;
     /*background: black;*/
-    background: url('http://assets22.pokemon.com/assets/cms2/img/pokedex/full/001.png') center / cover;
+    /*background: url('http://assets22.pokemon.com/assets/cms2/img/pokedex/full/001.png') center / cover;*/
     color: white;
     cursor: pointer;
 }
